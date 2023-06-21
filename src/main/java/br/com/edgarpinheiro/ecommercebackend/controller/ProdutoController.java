@@ -2,9 +2,9 @@ package br.com.edgarpinheiro.ecommercebackend.controller;
 
 import br.com.edgarpinheiro.ecommercebackend.model.Produto;
 import br.com.edgarpinheiro.ecommercebackend.repository.ProdutoRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,5 +20,11 @@ public class ProdutoController {
     @GetMapping
     public List<Produto> listarProdutos() {
         return produtoRepository.findAll();
+    }
+
+    @PostMapping
+    public ResponseEntity<Produto> novoProduto(@RequestBody Produto produto) {
+        Produto novoProduto = produtoRepository.save(produto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(novoProduto);
     }
 }
