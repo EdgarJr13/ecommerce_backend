@@ -37,6 +37,17 @@ public class ProdutoController {
         }
     }
 
+    @GetMapping("/obter_produto_id/{id}")
+    public ResponseEntity<Produto> obterProdutoPorId(@PathVariable Long id) {
+        Optional<Produto> produto = produtoService.obterProdutoPorId(id);
+
+        if (produto.isPresent()) {
+            return ResponseEntity.ok(produto.get());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     @GetMapping
     public List<Produto> listarProdutos() {
         return produtoService.listarProdutos();

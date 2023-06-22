@@ -20,13 +20,15 @@ public class ProdutoService {
         return produtoRepository.save(produto);
     }
 
-    public Optional<Produto> produtoPorId(Long id) {
+    public Optional<Produto> obterProdutoPorId(Long id) {
         return produtoRepository.findById(id);
     }
 
     public List<Produto> listarProdutos() {
         return produtoRepository.findAll();
     }
+
+
 
     public Produto atualizarProduto(Long id, Produto produtoAtualizado) {
         Optional<Produto> produtoExistente = produtoRepository.findById(id);
