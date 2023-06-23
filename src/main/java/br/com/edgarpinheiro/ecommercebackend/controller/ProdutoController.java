@@ -1,7 +1,6 @@
 package br.com.edgarpinheiro.ecommercebackend.controller;
 
 import br.com.edgarpinheiro.ecommercebackend.model.Produto;
-import br.com.edgarpinheiro.ecommercebackend.repository.ProdutoRepository;
 import br.com.edgarpinheiro.ecommercebackend.service.ProdutoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
