@@ -20,6 +20,15 @@ public class Produto {
 
     private BigDecimal valor;
 
+    public Produto() {
+    }
+
+    public Produto(String nome, String descricao, BigDecimal valor) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.valor = valor;
+    }
+
     public Long getId() {
         return id;
     }
