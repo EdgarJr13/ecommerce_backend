@@ -53,6 +53,13 @@ public class ProdutoController {
         return produtoService.listarProdutos();
     }
 
+    @GetMapping
+    @RequestMapping("/buscar")
+    public List<Produto> buscarProdutos(@RequestParam("search") String searchTerm) {
+        List<Produto> produtosEncontrados = produtoService.buscarProdutos(searchTerm);
+        return produtosEncontrados;
+    }
+
     @DeleteMapping("/deletar_produto/{id}")
     public ResponseEntity<Void> deletarProduto(@PathVariable Long id) {
         boolean excluido = produtoService.deletarProduto(id);

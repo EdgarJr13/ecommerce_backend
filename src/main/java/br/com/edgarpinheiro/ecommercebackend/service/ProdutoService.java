@@ -28,7 +28,10 @@ public class ProdutoService {
         return produtoRepository.findAll();
     }
 
-
+    public List<Produto> buscarProdutos(String searchTerm) {
+        List<Produto> produtosEncontrados = produtoRepository.findByTerm(searchTerm);
+        return produtosEncontrados;
+    }
 
     public Produto atualizarProduto(Long id, Produto produtoAtualizado) {
         Optional<Produto> produtoExistente = produtoRepository.findById(id);
