@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/produtos")
+@CrossOrigin(origins = "http://localhost:8081")
 public class ProdutoController {
 
     private final ProdutoService produtoService;
@@ -19,7 +20,7 @@ public class ProdutoController {
         this.produtoService = produtoService;
     }
 
-    @PostMapping("/novo_produto/")
+    @PostMapping("/novo_produto")
     public ResponseEntity<Produto> novoProduto(@RequestBody Produto produto) {
         Produto novoProduto = produtoService.novoProduto(produto);
         return ResponseEntity.status(HttpStatus.CREATED).body(novoProduto);
