@@ -34,7 +34,6 @@ A API oferece os seguintes endpoints para interagir com a aplicação:
 - `GET /api/produtos/{id}`: Retorna um produto específico com base no ID.
 - `PUT /api/produtos/{id}`: Atualiza um produto existente com base no ID.
 - `DELETE /api/produtos/{id}`: Exclui um produto com base no ID.
-- `GET /api/pedidos`: Retorna todos os pedidos cadastrados.
 
 ## Tecnologias utilizadas
 
