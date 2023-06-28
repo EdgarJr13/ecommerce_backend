@@ -30,10 +30,11 @@ docker run -p 8080:8080 ecommerce-backend
 A API oferece os seguintes endpoints para interagir com a aplicação:
 
 - `GET /api/produtos`: Retorna todos os produtos cadastrados.
-- `POST /api/produtos`: Cria um novo produto.
-- `GET /api/produtos/{id}`: Retorna um produto específico com base no ID.
-- `PUT /api/produtos/{id}`: Atualiza um produto existente com base no ID.
-- `DELETE /api/produtos/{id}`: Exclui um produto com base no ID.
+- `POST /api/produtos/novo_produto`: Cria um novo produto.
+- `GET /api/produtos/buscar`: Busca produtos que contenham o termo inserido como parâmetro.
+- `GET /api/produtos/obter_produto_id/{id}`: Retorna um produto específico com base no ID.
+- `PUT /api/produtos/atualizar_produto/{id}`: Atualiza um produto existente com base no ID.
+- `DELETE /api/produtos/deletar_produto/{id}`: Exclui um produto com base no ID.
 
 ## Tecnologias utilizadas
 
