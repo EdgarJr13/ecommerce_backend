@@ -1,9 +1,8 @@
 CREATE TABLE IF NOT EXISTS produto (
-    id INT AUTO_INCREMENT,
+    id SERIAL PRIMARY KEY,
     nome VARCHAR(255),
     descricao VARCHAR(255),
-    valor DECIMAL(10,2),
-    PRIMARY KEY (id)
+    valor NUMERIC(10,2)
     );
 
 INSERT INTO produto (nome, descricao, valor) VALUES
