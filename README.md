@@ -36,6 +36,12 @@ A API oferece os seguintes endpoints para interagir com a aplicação:
 - `PUT /api/produtos/atualizar_produto/{id}`: Atualiza um produto existente com base no ID.
 - `DELETE /api/produtos/deletar_produto/{id}`: Exclui um produto com base no ID.
 
+## Documentação da API
+
+A aplicação possui uma robusta documentação com explicação de todas as possibilidades existentes com seus métodos, 
+com exemplos de utilização e schemas das entidades existentes na mesma. Para acessá-la, basta rodar a aplicação e entrar em http://localhost:8080/documentation.html
+
+
 ## Tecnologias utilizadas
 
 - Java
